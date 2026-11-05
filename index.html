@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KHAN'S WAFFLES</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-circle">KW</div>
+        <div>
+            <h2>KHAN'S</h2>
+            <span>WAFFLES</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+
+        <div class="dropdown">
+            <a href="#menu" class="drop-btn">
+                Menu <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu">
+                <a href="#waffles">Waffles</a>
+                <a href="#pancakes">Pancakes</a>
+                <a href="#lollipop">Lollipop Waffles</a>
+            </div>
+        </div>
+
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cartCount">0</span>
+    </button>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">WELCOME TO</p>
+
+        <h1>KHAN'S <span>WAFFLES</span></h1>
+
+        <p>
+            Crispy, delicious and freshly prepared waffles,
+            pancakes and lollipop waffles made specially for you.
+        </p>
+
+        <a href="#menu" class="hero-btn">
+            Explore More
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section class="menu-section" id="menu">
+
+    <div class="section-heading">
+        <p>OUR SPECIAL MENU</p>
+        <h2>Choose Your <span>Favourite</span></h2>
+        <div class="line"></div>
+    </div>
+
+
+    <!-- WAFFLES -->
+
+    <div class="category" id="waffles">
+
+        <h3><i class="fa-solid fa-cookie-bite"></i> Waffles</h3>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Classic Waffle</h4>
+                    <p>Fresh crispy waffle served with delicious toppings.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 250</strong>
+                        <button onclick="addToCart('Classic Waffle',250)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1558584724-0e4d32ca55a4?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Chocolate Waffle</h4>
+                    <p>Soft waffle covered with rich chocolate sauce.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 320</strong>
+                        <button onclick="addToCart('Chocolate Waffle',320)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Strawberry Waffle</h4>
+                    <p>Fresh strawberries with cream and sweet sauce.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 350</strong>
+                        <button onclick="addToCart('Strawberry Waffle',350)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Oreo Waffle</h4>
+                    <p>Crispy waffle with Oreo crumbs and chocolate.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 350</strong>
+                        <button onclick="addToCart('Oreo Waffle',350)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Nutella Waffle</h4>
+                    <p>Loaded with creamy Nutella and tasty toppings.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 400</strong>
+                        <button onclick="addToCart('Nutella Waffle',400)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1575853121743-60c24f0a7502?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Lotus Waffle</h4>
+                    <p>Premium Lotus spread with crunchy biscuit crumbs.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 420</strong>
+                        <button onclick="addToCart('Lotus Waffle',420)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>KitKat Waffle</h4>
+                    <p>Chocolate waffle topped with KitKat pieces.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 390</strong>
+                        <button onclick="addToCart('KitKat Waffle',390)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Belgian Waffle</h4>
+                    <p>Classic Belgian style waffle with premium toppings.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 450</strong>
+                        <button onclick="addToCart('Belgian Waffle',450)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- PANCAKES -->
+
+    <div class="category" id="pancakes">
+
+        <h3><i class="fa-solid fa-layer-group"></i> Pancakes</h3>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Classic Pancakes</h4>
+                    <p>Fluffy pancakes served with sweet syrup.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 280</strong>
+                        <button onclick="addToCart('Classic Pancakes',280)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Chocolate Pancakes</h4>
+                    <p>Soft chocolate pancakes with creamy chocolate.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 330</strong>
+                        <button onclick="addToCart('Chocolate Pancakes',330)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Strawberry Pancakes</h4>
+                    <p>Fluffy pancakes with fresh strawberries.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 360</strong>
+                        <button onclick="addToCart('Strawberry Pancakes',360)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1554520735-0a6b8b6ce8b7?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Oreo Pancakes</h4>
+                    <p>Oreo crumbs, cream and chocolate on fluffy pancakes.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 370</strong>
+                        <button onclick="addToCart('Oreo Pancakes',370)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Nutella Pancakes</h4>
+                    <p>Fluffy pancakes filled with creamy Nutella.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 400</strong>
+                        <button onclick="addToCart('Nutella Pancakes',400)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Lotus Pancakes</h4>
+                    <p>Lotus spread and biscuit crumbs with fresh cream.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 420</strong>
+                        <button onclick="addToCart('Lotus Pancakes',420)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Banana Pancakes</h4>
+                    <p>Sweet banana slices with soft fluffy pancakes.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 340</strong>
+                        <button onclick="addToCart('Banana Pancakes',340)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- LOLLIPOP -->
+
+    <div class="category" id="lollipop">
+
+        <h3><i class="fa-solid fa-ice-cream"></i> Lollipop Waffles</h3>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Classic Lollipop</h4>
+                    <p>Fun waffle lollipop covered with sweet chocolate.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 220</strong>
+                        <button onclick="addToCart('Classic Lollipop',220)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Chocolate Lollipop</h4>
+                    <p>Chocolate dipped waffle lollipop with sprinkles.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 260</strong>
+                        <button onclick="addToCart('Chocolate Lollipop',260)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Oreo Lollipop</h4>
+                    <p>Crunchy Oreo topping with creamy chocolate.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 280</strong>
+                        <button onclick="addToCart('Oreo Lollipop',280)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Strawberry Lollipop</h4>
+                    <p>Sweet strawberry topping on crispy waffle.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 290</strong>
+                        <button onclick="addToCart('Strawberry Lollipop',290)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476e?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>KitKat Lollipop</h4>
+                    <p>Chocolate waffle lollipop with KitKat pieces.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 300</strong>
+                        <button onclick="addToCart('KitKat Lollipop',300)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1559628233-7a6c9c47b2d9?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Lotus Lollipop</h4>
+                    <p>Premium Lotus spread with crunchy biscuit topping.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 320</strong>
+                        <button onclick="addToCart('Lotus Lollipop',320)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Rainbow Lollipop</h4>
+                    <p>Colourful sprinkles with chocolate waffle.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 280</strong>
+                        <button onclick="addToCart('Rainbow Lollipop',280)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80">
+                <div class="product-info">
+                    <h4>Premium Lollipop</h4>
+                    <p>Our special premium lollipop waffle creation.</p>
+                    <div class="product-bottom">
+                        <strong>Rs. 350</strong>
+                        <button onclick="addToCart('Premium Lollipop',350)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="section-heading">
+        <p>GET IN TOUCH</p>
+        <h2>Contact <span>KHAN'S WAFFLES</span></h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="contact-grid">
+
+        <a href="https://instagram.com/khans_waffles"
+           target="_blank"
+           class="contact-box">
+
+            <i class="fa-brands fa-instagram"></i>
+            <h3>Instagram</h3>
+            <p>@khans_waffles</p>
+
+        </a>
+
+
+        <a href="https://www.tiktok.com/@khans.waffles"
+           target="_blank"
+           class="contact-box">
+
+            <i class="fa-brands fa-tiktok"></i>
+            <h3>TikTok</h3>
+            <p>@khans.waffles</p>
+
+        </a>
+
+
+        <a href="https://wa.me/923282235570?text=Assalamualaikum%20KHAN'S%20WAFFLES,%20I%20want%20to%20place%20an%20order."
+           target="_blank"
+           class="contact-box">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            <h3>WhatsApp Order</h3>
+            <p>0328 2235570</p>
+
+        </a>
+
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Pariya+Food+Street+near+Mehak+Restaurant+opposite+UBL+Bank+beside+Al+Habib+Bank"
+           target="_blank"
+           class="contact-box">
+
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Location</h3>
+            <p>Pariya Food Street</p>
+
+        </a>
+
+
+        <a href="https://foodpanda.go.link/lkqnf"
+           target="_blank"
+           class="contact-box foodpanda">
+
+            <i class="fa-solid fa-motorcycle"></i>
+            <h3>Foodpanda</h3>
+            <p>Order from Foodpanda</p>
+
+        </a>
+
+    </div>
+
+
+    <div class="location-text">
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+        <p>
+            Pariya Food Street, Near Mehak Restaurant,
+            Opposite UBL Bank, Beside Al Habib Bank
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        <div class="logo-circle">KW</div>
+        <h2>KHAN'S WAFFLES</h2>
+    </div>
+
+    <p>
+        Fresh waffles. Sweet moments. Made with love.
+    </p>
+
+    <div class="social-links">
+
+        <a href="https://instagram.com/khans_waffles" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@khans.waffles" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a href="https://wa.me/923282235570" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="https://foodpanda.go.link/lkqnf" target="_blank">
+            <i class="fa-solid fa-motorcycle"></i>
+        </a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 KHAN'S WAFFLES. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <h2>Your Cart</h2>
+
+        <button onclick="closeCart()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+    <div id="cartItems" class="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+
+        <h3>
+            Total:
+            <span id="cartTotal">Rs. 0</span>
+        </h3>
+
+        <a id="whatsappOrder"
+           href="#"
+           target="_blank"
+           class="order-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Order on WhatsApp
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOP BUTTON ================= -->
+
+<button id="topBtn" onclick="scrollToTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
